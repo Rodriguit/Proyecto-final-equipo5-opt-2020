@@ -1,21 +1,39 @@
 ## Proyecto Final del curso Optimización: Equipo 5
 
 Este es el repositorio de Proyecto Final para la materia de Optimización del semestre 2020-2 en la Maestría en Ciencia de Datos, ITAM
+______
 
-**Integrantes:**
+**Ligas de trabajo:**
 
-* José Reyes Garza - 142207
+* (forked repo erick)[https://github.com/Rodriguit/analisis-numerico-computo-cientifico/tree/optimizacion-2020-2/proyecto_final/indicaciones]
+* (develop branch)[https://github.com/Rodriguit/Proyecto-final-equipo5-opt-2020/tree/develop]
+* (construcción reporte)[https://www.overleaf.com/project/5fc535eb8fa71982ee3a3c48]
+____
+Equipo de trabajo 5:
 
-* Miguel López Cruz - 197967
 
-* José Luis Zárate Cortés - 183347
+**Equipo:**
+|:------------:|:---------:|:-------------------------------|
+| @lobolc      | Miguel    | Programación y Revisión        |
+| @jreyesgar93 | José      | Solución y Programación        |
+| @Rodriguit   | Rodrigo   | Revisión                       |
+| @ZarCorvus   | José Luis | Project Manager y Programacion |
 
-* Rodrigo Suárez Segovia - 191351
 
 ### Título del proyecto:
 
-**PCA: Aplicación en Compresión de Imágenes**
+**Método de Máxima Verosimilitud como problema de Optimización**
 
 ### Objetivo del proyecto: 
 
-Uso de PCA para la compresión y reconstrucción de imágenes de rostros de personas empleando el lenguaje de programación Python. El alcance del proyecto se orienta al estudio de la reducción de dimensionalidad a través de PCA, entendimiento de los algoritmos y aplicación en reconstrucción de imágenes.
+Resolver un problema de Optimización al maximizar los parámetros de una distribución por Máxima Verosimilitud con Métodos de Descenso.
+
+
+
+
+
+
+
+
+
+
