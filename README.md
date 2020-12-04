@@ -14,7 +14,8 @@ Este es el repositorio de Proyecto Final para la materia de Optimización del se
 
 ### Título del proyecto:
 
-**PCA: Aplicación en Compresión de Imágenes**
+**Método de Máxima Verosimilitud como problema de optimización**
+
 
 ### Objetivo del proyecto: 
 
@@ -22,8 +23,8 @@ Uso de PCA para la compresión y reconstrucción de imágenes de rostros de pers
 
 ### Indice del proyecto
 
-1. [Introducción]()
-2. [Arquitectura requerida]()
+1. [Introducción](https://github.com/Rodriguit/Proyecto-final-equipo5-opt-2020/tree/task3_computo_nube#introducci%C3%B3n)
+2. [Arquitectura requerida](https://github.com/Rodriguit/Proyecto-final-equipo5-opt-2020/tree/task3_computo_nube#introducci%C3%B3n)
 
 ### Introducción
 
@@ -35,10 +36,19 @@ Con el propósito de reproducibilidad del proyecto y todos los integrantes tuvie
 
 **Crear la maquina EC2**
 
-Se utilizó una cuenta de AWS para elegir de máquinas EC2.
+Se utilizó una cuenta de AWS para elegir una Elastic Cloud Compute
 
-Paso 1: Se lanzó una instancia de AWS de tipo EC2, la Amazon Machine Image (AMI) que se eligió fue una del tipo ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20200408
+**Paso 1:** 
+
+Se lanzó una instancia de AWS de tipo EC2, la Amazon Machine Image (AMI) que se eligió fue una del tipo ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64bits. El tipo de instancia que se eligió fue una t2.micro que cuenta 8 GB de memoria.
 
 ![Ejemplo_AMI\textwidth](https://github.com/Rodriguit/Proyecto-final-equipo5-opt-2020/blob/task3_computo_nube/images/AMI.png)
 
+**Paso 2:** 
 
+Se configuró la instancia siguiendo los pasos de la wiki de AWS del curso de optimización. En resumen, se tuvo que configurar una VPC, una subnet pública y un grupo de seguridad. 
+
+![Ejemplo_vpc\textwidth](https://github.com/Rodriguit/Proyecto-final-equipo5-opt-2020/blob/task3_computo_nube/images/vpc.png)
+![Ejemplo_sgp\textwidth](https://github.com/Rodriguit/Proyecto-final-equipo5-opt-2020/blob/task3_computo_nube/images/sgp.png)
+
+**Instalación de herramientas de trabajo Docker y Git**
