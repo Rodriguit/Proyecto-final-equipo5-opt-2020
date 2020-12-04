@@ -13,6 +13,7 @@ ______
 ____
 **Equipo:**  
 
+| Github_User  | Alumno    | Scrum Rol                      |
 |:------------:|:---------:|:------------------------------:|
 | @lobolc      | Miguel    | Programación y Revisión        |
 | @jreyesgar93 | José      | Solución y Programación        |
