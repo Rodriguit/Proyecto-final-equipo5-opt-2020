@@ -1,18 +1,18 @@
 ## Proyecto Final del curso Optimización: Equipo 5
 
-Este es el repositorio de Proyecto Final para la materia de Optimización del semestre 2020-2 en la Maestría en Ciencia de Datos, ITAM
+Este es el repositorio del Proyecto Final curso Optimización   
+Semestre 2020-2  
+Maestría en Ciencia de Datos, ITAM  
 ______
 
-**Ligas de trabajo:**
+**Ligas de trabajo:**  
 
-* (forked repo erick)[https://github.com/Rodriguit/analisis-numerico-computo-cientifico/tree/optimizacion-2020-2/proyecto_final/indicaciones]
-* (develop branch)[https://github.com/Rodriguit/Proyecto-final-equipo5-opt-2020/tree/develop]
-* (construcción reporte)[https://www.overleaf.com/project/5fc535eb8fa71982ee3a3c48]
+* [forked repo erick](ttps://github.com/Rodriguit/analisis-numerico-computo-cientifico/tree/optimizacion-2020-2/proyecto_final/indicaciones)
+* [develop branch](https://github.com/Rodriguit/Proyecto-final-equipo5-opt-2020/tree/develop)
+* [construcción reporte](https://www.overleaf.com/project/5fc535eb8fa71982ee3a3c48)
 ____
-Equipo de trabajo 5:
+**Equipo:**  
 
-
-**Equipo:**
 |:------------:|:---------:|:-------------------------------|
 | @lobolc      | Miguel    | Programación y Revisión        |
 | @jreyesgar93 | José      | Solución y Programación        |
@@ -20,11 +20,11 @@ Equipo de trabajo 5:
 | @ZarCorvus   | José Luis | Project Manager y Programacion |
 
 
-### Título del proyecto:
+#### Título del proyecto:  
 
 **Método de Máxima Verosimilitud como problema de Optimización**
 
-### Objetivo del proyecto: 
+#### Objetivo del proyecto:   
 
 Resolver un problema de Optimización al maximizar los parámetros de una distribución por Máxima Verosimilitud con Métodos de Descenso.
 
