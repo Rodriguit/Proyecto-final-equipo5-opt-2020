@@ -25,6 +25,4 @@ def gradient_normal_loglike(params,**kwargs):
     n=len(data)
     dmu= (1/(sigma**2))*np.sum(x-mu)
     dsigma=-(n/2)*((2*sigma)/sigma**2)+(1/sigma**3)*np.sum((x-mu)**2)
-    
-    
     return np.array([dmu,dsigma])
