@@ -13,7 +13,7 @@ Este es el repositorio de Proyecto Final para la materia de Optimización del se
 
 ### Título del proyecto:
 
-**PCA: Aplicación en Compresión de Imágenes**
+**Método de Máxima Verosimilitud como problema de Optimización**
 
 ### Objetivo del proyecto: 
 
