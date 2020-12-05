@@ -4,13 +4,12 @@ Este es el repositorio de Proyecto Final para la materia de Optimización del se
 
 **Integrantes:**
 
-* José Reyes Garza - 142207
-
-* Miguel López Cruz - 197967
-
-* José Luis Zárate Cortés - 183347
-
-* Rodrigo Suárez Segovia - 191351
+| Github_User  | Alumno    | Scrum Rol                      |
+|:------------:|:---------:|:------------------------------:|
+| @lobolc      | Miguel    | Solución y Programación        |
+| @jreyesgar93 | José      | Solución y Programación        |
+| @Rodriguit   | Rodrigo   | Programación y Revisión        |
+| @ZarCorvus   | José Luis | Project Manager                |
 
 ### Título del proyecto:
 
@@ -18,7 +17,7 @@ Este es el repositorio de Proyecto Final para la materia de Optimización del se
 
 ### Objetivo del proyecto: 
 
-Uso de PCA para la compresión y reconstrucción de imágenes de rostros de personas empleando el lenguaje de programación Python. El alcance del proyecto se orienta al estudio de la reducción de dimensionalidad a través de PCA, entendimiento de los algoritmos y aplicación en reconstrucción de imágenes.
+En el contexto de la inferencia estadística, uno de los principales problemas que se enfrentan es determinar el valor de un parámetro (o los valores de varios parámetros) de un conjunto posible de alternativas. En este sentido, existen diversas metodologías que nos permiten calcular estimadores distintos de un mismo parámetro de una población, tales como el método de momentos y el método de máxima verosimilitud. Tales metodologías, esencialmente realizan un proceso de Optimización, por lo que naturalmete podemos adecuar este proceso para analizarlo a través de los métodos de Descenso en Gradiente y Newton-Raphson.  
 
 ### Indice del proyecto
 
@@ -27,7 +26,7 @@ Uso de PCA para la compresión y reconstrucción de imágenes de rostros de pers
 
 ### Introducción
 
-El análisis de componentes principales (PCA) es una técnica para reducir la dimensionalidad de los conjuntos de datos, aprovechando el hecho de que las imágenes de estos conjuntos de datos tienen algo en común. Por ejemplo, en un conjunto de datos que consta de fotografías faciales, cada fotografía tendrá rasgos faciales como ojos, nariz, boca. En lugar de codificar esta información píxel a píxel, podríamos hacer una plantilla de cada tipo de estas características y luego simplemente combinar estas plantillas para generar cualquier rostro en el conjunto de datos. En este enfoque, cada plantilla seguirá teniendo una dimensión de 64x64 = 4096, pero como reutilizaremos estas plantillas (funciones básicas) para generar cada cara en el conjunto de datos, la cantidad de plantillas necesarias será pequeña. 
+. 
 
 ## Arquitectura requerida 
 
