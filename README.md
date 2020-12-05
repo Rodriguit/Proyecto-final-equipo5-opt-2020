@@ -15,10 +15,10 @@ ____
 
 | Github_User  | Alumno    | Scrum Rol                      |
 |:------------:|:---------:|:------------------------------:|
-| @lobolc      | Miguel    | Programación y Revisión        |
+| @lobolc      | Miguel    | Solución y Programación        |
 | @jreyesgar93 | José      | Solución y Programación        |
-| @Rodriguit   | Rodrigo   | Revisión                       |
-| @ZarCorvus   | José Luis | Project Manager y Programacion |
+| @Rodriguit   | Rodrigo   | Programación y Revisión        |
+| @ZarCorvus   | José Luis | Project Manager                |
 
 
 #### Título del proyecto:  
