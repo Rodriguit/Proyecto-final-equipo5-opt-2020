@@ -28,7 +28,7 @@ ____
 #### Objetivo del proyecto:   
 
 Resolver un problema de Optimización al maximizar los parámetros de una distribución por Máxima Verosimilitud con Métodos de Descenso.
-
+.
 
 
 
