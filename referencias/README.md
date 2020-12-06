@@ -1,5 +1,4 @@
 ### Rerefencias del Proyecto:
-
 * MÁXIMA VEROSIMILITUD
    - [1](https://)
    - [2](https://)
@@ -13,3 +12,4 @@
 
 
 * FUNCIONES DE DISTRIBUCION
+
