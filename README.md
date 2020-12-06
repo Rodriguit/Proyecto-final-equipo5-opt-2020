@@ -7,7 +7,7 @@ ______
 
 **Ligas de trabajo:**  
 
-* [forked repo erick](https://github.com/Rodriguit/analisis-numerico-computo-cientifico/tree/optimizacion-2020-2/proyecto_final/indicaciones)
+* [forked repo erick](https://github.com/Rodriguit/analisis-numerico-computo-cientifico/tree/optimizacion-2020-2/proyecto_final/proyectos/equipos/equipo_hessiano)
 * [develop branch](https://github.com/Rodriguit/Proyecto-final-equipo5-opt-2020/tree/develop)
 * [construcción reporte](https://www.overleaf.com/project/5fc535eb8fa71982ee3a3c48)
 ____
