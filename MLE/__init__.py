@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def normal_loglikelihood(params,*args):
+def normal_loglikelihood(params,data):
     mu = params[0]
     sigma = params[1]
     x = data
@@ -11,7 +11,7 @@ def normal_loglikelihood(params,*args):
     
     return -1*loglikelihood
 
-def gradient_normal_loglike(params,*args):
+def gradient_normal_loglike(params,data):
     mu = params[0]
     sigma = params[1]
     x=data
@@ -21,7 +21,7 @@ def gradient_normal_loglike(params,*args):
     return -1*np.array([dmu,dsigma])
 
 
-def gradient_descent(x,gradient,tol=.0001,maxiter=10000,step_size=.0001):
+def gradient_descent(x,gradient,data,tol=.0001,maxiter=10000,step_size=.0001):
     x_old=x+10
     i=0
     points=list()
@@ -30,7 +30,7 @@ def gradient_descent(x,gradient,tol=.0001,maxiter=10000,step_size=.0001):
             break
         points.append(x)
         x_old=x
-        x=x-step_size*gradient(x)
+        x=x-step_size*gradient(x,data)
         i+=1
     return x
 
