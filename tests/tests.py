@@ -9,4 +9,4 @@ def normal_estimation(data_normal):
     std_test=std_analytic_normal(data)
     
     assert our_estimation[0]==mean_test
-    assert our_estimation[2]==std_test
+    assert our_estimation[1]==std_test
