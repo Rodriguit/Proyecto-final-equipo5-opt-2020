@@ -26,7 +26,7 @@ En el contexto de la inferencia estadística, uno de los principales problemas q
 2. [Arquitectura requerida](https://github.com/Rodriguit/Proyecto-final-equipo5-opt-2020/tree/task3_computo_nube#introducci%C3%B3n)
 
 ### Introducción
-
+.
 . 
 
 ### Arquitectura requerida 
