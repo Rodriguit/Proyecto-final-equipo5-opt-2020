@@ -12,12 +12,212 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
 				<section>Equipo 5: Máxima Verosimilitud</section>
 				<section>Introducción</section>
+				<section>Máxima Verosimilitud para Distribución Normal
+					<section>
+						La distribución de probabilidad de una Normal tiene la siguiente forma:
+
+						$$f_x(x|\mu,\sigma)=\frac{1}{\sqrt{2\pi\sigma^2}} e^{\frac{1}{2}\big(\frac{x-\mu}{\sigma}\big)^2}$$
+					</section>
+					<section>
+						Se puede estimar los parámetros $\mu$ y $\sigma$ desconocidos utilizando el método de máxima verosimilitud dado un conjunto de datos independientes e idénticamente distribuidos: 
+						$$X_n=x_1,x_2,...,x_n \sim N(\mu,\sigma)$$
+					</section>
+					<section>
+						Sea $\ell(\mu,\sigma|X_n)$ la función de verosimilitud de la distribución normal. Se tiene que: 
+
+						$$\ell(\mu,\sigma|X_n)=\prod^n_{i=1}f_x(x_i|\mu,\sigma)$$
+
+
+						$$\ell(\mu,\sigma|X_n)=(2\pi\sigma^2)^{\frac{-n}{2}} exp\big({\frac{1}{2\sigma^2}\sum^n_{i=1}(x_i-\mu)^2}\big)$$
+					</section>
+					<section>
+						
+						Transformación Logarítmica:
+						$$ln(\ell(\mu,\sigma|X_n))=-\frac{n}{2}ln(2\pi)-\frac{n}{2}ln(\sigma^2) -{\frac{1}{2\sigma^2}\sum^n_{i=1}(x_i-\mu)^2}$$
+					</section>
+					<section>
+
+						El problema de maximizacion esta dado por:
+						$$max_{\mu,\sigma}ln(\ell(\mu,\sigma|X_n))=-\frac{n}{2}ln(2\pi)-\frac{n}{2}ln(\sigma^2) -{\frac{1}{2\sigma^2}\sum^n_{i=1}(x_i-\mu)^2}$$
+
+					</section>
+					<section>
+						
+						Para determinar que los los puntos $\mu^*$ y $\sigma^*$ son puntos óptimos, deben cumplir con lo siguiente:
+
+						- Condición Necesaria de Primer Orden:
+						$$\nabla(\ell(\mu^*,\sigma^*|X_n))=0$$
+
+					</section>
+					<section>
+						- Condición Suficiente de Segundo Orden:
+	
+						$$\nabla^2(\ell(\mu^*,\sigma^*|X_n))\in -\mathbb{S}_{++}$$
+					</section>
+					<section>
+						
+							Para esta función de log-verosimilitud, el gradiente está dado por: 
+
+
+
+							$$
+							\nabla(\ell(\mu,\sigma|X_n))=
+							\begin{bmatrix}
+							\frac{\partial\ell(\mu,\sigma|X_n)}{\partial\mu}
+							\\
+							\\
+							\frac{\partial\ell(\mu,\sigma|X_n)}{\partial\sigma}
+
+							\end{bmatrix}
+							=
+							\begin{bmatrix}
+							{\frac{1}{\sigma^2}\sum^n_{i=1}(x_i-\mu)}
+							\\
+							\\
+							-\frac{n}{\sigma}+\frac{1}{\sigma^3}\sum^n_{i=1}(x_i-\mu)^2
+
+							\end{bmatrix}
+							$$
+
+					</section>
+					<section>
+												
+						Para resolver el problema de forma analítica,se tiene un sistema de ecuaciones no lineales con dos incógnitas que están dadas por la condición necesaria de primer orden.
+
+						
+
+							$${\frac{1}{\sigma^2}\sum^n_{i=1}(x_i-\mu)}=0$$
+			
+							$$-\frac{n}{\sigma}+\frac{1}{\sigma^3}\sum^n_{i=1}(x_i-\mu)^2=0$$
+						
+					</section>
+					<section>
+
+						Resolviendo dicho sistema, tenemos que los estimadores de máxima verosimilitud son:
+
+						$$\mu_{mle}=\frac{1}{n}\sum^n_{i=1}x_i$$
+
+						$$\sigma_{mle}=\sqrt{\frac{1}{n}\sum^n_{i=1}(x_i-\mu_{mle})^2}$$
+					</section>
+
+					<section>
+						Cuasiconcavidad
+
+						 <img src="images/Captura.PNG"  height="500" width="700">
+					</section>
+
+				</section>
+				<section>Aplicación Máxima Verosimilitud
+					<section>
+						Para la estimación de parámetros por el método de máxima verosimilitud, se desarrollo una serie de algoritmos que implementan métodos numéricos necesarios resolver el problema. 
+						
+					</section>
+					<section>
+						Para ilustrar el funcionamiento de estos métodos numéricos, se utiliza una base de datos de rendimiento de trigo por unidad de tierra.
+						Esta base de datos es de un estudio históricamente relevante por Mercer and Hall en Rothamsted Experimental Station en Gran Bretaña en el año de 1910.
+						Esta estación experimental se fundó en 1834 con el objetivo de experimentar con diferentes cultivos y analizar su rendimiento contrastando el uso de distintos fertilizantes.
+					</section>
+					<section>
+
+						Histograma de Frecuencias
+						<img src="images/Captura2.PNG"  height="500" width="700">
+					</section>
+					<section> 
+						Log Similitud
+						<pre><code data-trim data-noescape>
+							
+							def normal_loglikelihood(params,data):
+								mu = params[0]
+								sigma = params[1]
+								x = data
+								n=len(data)
+
+								loglikelihood=-(n/2)*np.log(2*np.pi)-(n/2)*
+									np.log(sigma**2)-(1/(2*sigma**2))*np.sum((x-mu)**2)
+
+								return -1*loglikelihood
+						</code></pre>
+					</section>
+					<section> 
+						Gradiente
+						<pre><code data-trim data-noescape>
+							
+							def gradient_normal_loglike(params,data):
+								mu = params[0]
+								sigma = params[1]
+								x=data
+								n=len(data)
+								dmu= (1/(sigma**2))*np.sum(x-mu)
+								dsigma=-(n/2)*((2*sigma)/sigma**2)+(1/sigma**3)*np.sum((x-mu)**2)
+								return -1*np.array([dmu,dsigma])
+						</code></pre>
+					</section>
+					<section> 
+						Descenso en Gradiente
+						<pre><code data-trim data-noescape>
+							def gradient_descent(x,gradient,data,tol=.0001,maxiter=10000,step_size=.0001):
+								x_old=x+10
+								i=0
+								points=list()
+								while ((np.linalg.norm(x-x_old)>=tol)):
+									if i==1000:
+										break
+									points.append(x)
+									x_old=x
+									x=x-step_size*gradient(x,data)
+									i+=1
+								return x
+						</code></pre>
+					</section>
+					<section>
+						Trayectoria de Descenso
+						<img src="images/Captura3.PNG"  height="500" width="700">
+					</section>
+					<section>
+						Resultados
+						
+						
+							<table>
+								<thead><tr>
+									<th></th>
+									<th>$\mu$</th>
+									<th>$\sigma$</th>
+								</tr></thead>
+								<tbody><tr>
+									<td>Solución por DG</td>
+									<td>3.94832449</td>
+									<td>0.45782199</td>
+								</tr>
+								<tr>
+									<td>Solución Analítica </td>
+									<td>3.9486399 </td>
+									<td>0.45782108</td>
+								</tr></tbody>
+								<tr>
+									<td> Error Relativo</td>
+									<td>-7.99e-05</td>
+									<td>1.97e-06</td>
+								</tr></tbody>
+							</table>
+						
+					</section>
+
+
+
+				</section>
+
+
+
+
+
+				
 			</div>
 		</div>
 
@@ -33,7 +233,19 @@
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, Reve ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			Reveal.initialize({
+				math: {
+				mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+				config: 'TeX-AMS_HTML-full',
+				// pass other options into `MathJax.Hub.Config()`
+				TeX: { Macros: { RR: "{\\bf R}" } }
+				},
+				plugins: [ RevealMath ]
 			});
 		</script>
 	</body>
