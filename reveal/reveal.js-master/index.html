@@ -17,49 +17,66 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Equipo 5: Máxima Verosimilitud</section>
-				<section>Introducción</section>
-				<section>Máxima Verosimilitud para Distribución Normal
+				<section>Equipo 5: Método de máxima verosimilitud como problema de optimización.</section>
+				<section>Introducción
 					<section>
-						La distribución de probabilidad de una Normal tiene la siguiente forma:
+						En estadística, uno de los principales problemas es determinar el valor de un parámetro (o los valores de varios parámetros) 
+						alternativos. 
+					</section>
+					<section>
+						En este sentido, existen diversas metodologías que nos permiten calcular estimadores distintos 
+						de un mismo parámetro para una población, tales como el método de momentos y el método de máxima verosimilitud. 
+					</section>
+					<section>
+						Esencialmente, dichas metodologías realizan un proceso de optimización, por lo que naturalmente podemos adecuar 
+						este proceso para analizarlo a través de los métodos de descenso en gradiente y Newton-Raphson.
+					</section>
+				</section>
+				<section>Máxima verosimilitud para distribución normal
+					<section>
+						La distribución de probabilidad de una normal tiene la siguiente forma:
 
 						$$f_x(x|\mu,\sigma)=\frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{1}{2}\big(\frac{x-\mu}{\sigma}\big)^2}$$
 					</section>
 					<section>
-						Se puede estimar los parámetros $\mu$ y $\sigma$ desconocidos utilizando el método de máxima verosimilitud dado un conjunto de datos independientes e idénticamente distribuidos: 
+						Para un conjunto de datos independientes e idénticamente distribuidos, se puede estimar los parámetros $\mu$ y $\sigma$ desconocidos utilizando el método de máxima verosimilitud  
 						$$X_n=x_1,x_2,...,x_n \sim N(\mu,\sigma)$$
 					</section>
 					<section>
-						Sea $\ell(\mu,\sigma|X_n)$ la función de verosimilitud de la distribución normal. Se tiene que: 
+						Sea $\mathcal{L}(\mu,\sigma|X_n)$ la función de verosimilitud de la distribución normal. Se tiene que: 
 
-						$$\ell(\mu,\sigma|X_n)=\prod^n_{i=1}f_x(x_i|\mu,\sigma)$$
+						$$\mathcal{L}(\mu,\sigma|X_n)=\prod^n_{i=1}f_x(x_i|\mu,\sigma)$$
 
 
-						$$\ell(\mu,\sigma|X_n)=(2\pi\sigma^2)^{\frac{-n}{2}} exp\big({-\frac{1}{2\sigma^2}\sum^n_{i=1}(x_i-\mu)^2}\big)$$
+						$$\mathcal{L}(\mu,\sigma|X_n)=(2\pi\sigma^2)^{\frac{-n}{2}} exp\big({-\frac{1}{2\sigma^2}\sum^n_{i=1}(x_i-\mu)^2}\big)$$
 					</section>
 					<section>
 						
-						Transformación Logarítmica:
-						$$ln(\ell(\mu,\sigma|X_n))=-\frac{n}{2}ln(2\pi)-\frac{n}{2}ln(\sigma^2) -{\frac{1}{2\sigma^2}\sum^n_{i=1}(x_i-\mu)^2}$$
+						Transformación logarítmica:
+						$$ln(\mathcal{L}(\mu,\sigma|X_n))=-\frac{n}{2}ln(2\pi)-\frac{n}{2}ln(\sigma^2) -{\frac{1}{2\sigma^2}\sum^n_{i=1}(x_i-\mu)^2}$$
 					</section>
 					<section>
 
-						El problema de maximizacion esta dado por:
-						$$max_{\mu,\sigma}ln(\ell(\mu,\sigma|X_n))=-\frac{n}{2}ln(2\pi)-\frac{n}{2}ln(\sigma^2) -{\frac{1}{2\sigma^2}\sum^n_{i=1}(x_i-\mu)^2}$$
+						El problema de maximizacion está dado por:
+						$$max_{\mu,\sigma}ln(\mathcal{L}(\mu,\sigma|X_n))=-\frac{n}{2}ln(2\pi)-\frac{n}{2}ln(\sigma^2) -{\frac{1}{2\sigma^2}\sum^n_{i=1}(x_i-\mu)^2}$$
 
 					</section>
 					<section>
 						
-						Para determinar que los los puntos $\mu^*$ y $\sigma^*$ son puntos óptimos, deben cumplir con lo siguiente:
+						Se cumple que $\mu^*$ y $\sigma^*$ son puntos óptimos si:
 
-						- Condición Necesaria de Primer Orden:
-						$$\nabla(\ell(\mu^*,\sigma^*|X_n))=0$$
+						condición necesaria de primer orden:
+						$$\nabla(\mathcal{L}(\mu^*,\sigma^*|X_n))=0$$
 
 					</section>
 					<section>
-						- Condición Suficiente de Segundo Orden:
+						condición suficiente de segundo orden:
 	
-						$$\nabla^2(\ell(\mu^*,\sigma^*|X_n))\in -\mathbb{S}_{++}$$
+						$$\nabla^2(\mathcal{L}(\mu^*,\sigma^*|X_n))\in -\mathbb{S}_{++}$$
+
+						o equivalentemente:
+
+						$$-\nabla^2(\mathcal{L}(\mu^*,\sigma^*|X_n))\in \mathbb{S}_{++}$$
 					</section>
 					<section>
 						
@@ -68,12 +85,12 @@
 
 
 							$$
-							\nabla(\ell(\mu,\sigma|X_n))=
+							\nabla(\mathcal{L}(\mu,\sigma|X_n))=
 							\begin{bmatrix}
-							\frac{\partial\ell(\mu,\sigma|X_n)}{\partial\mu}
+							\frac{\partial\mathcal{L}(\mu,\sigma|X_n)}{\partial\mu}
 							\\
 							\\
-							\frac{\partial\ell(\mu,\sigma|X_n)}{\partial\sigma}
+							\frac{\partial\mathcal{L}(\mu,\sigma|X_n)}{\partial\sigma}
 
 							\end{bmatrix}
 							=
