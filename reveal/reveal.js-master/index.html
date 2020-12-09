@@ -105,6 +105,24 @@
 
 					</section>
 					<section>
+						
+							Para esta función de log-verosimilitud, la hessiana está dada por: 
+
+
+							$$
+							\nabla^2(\mathcal{L}(\mu,\sigma|X_n))=
+							\\
+							\begin{bmatrix}
+							-\frac{1}{\sigma^2}n& -\frac{​​​​2}​​​​{​​​​\sigma^3}​​​​ \sum^n_{​​​​i=1}​​​​(x_i-\mu)
+							\\
+							\\
+							-\frac{​​​​2}​​​​{​​​​\sigma^3}​​​​ \sum^n_{​​​​i=1}​​​​(x_i-\mu)& \frac{​​​​n}{\sigma^2}-\frac{​​​​4}{\sigma^4}\sum^n_{​​​​i=1}(x_i-\mu)^2
+
+							\end{bmatrix}
+							$$
+
+				</section>
+					<section>
 												
 						Para resolver el problema de forma analítica,se tiene un sistema de ecuaciones no lineales con dos incógnitas que están dadas por la condición necesaria de primer orden.
 
@@ -230,17 +248,17 @@
 
 				</section>
 				<section>
-					Máxima verosimilitud para una distribución poisson
+					Conclusiones:
 					<section>
-						La distribución de probabilidad de una poisson tiene la siguiente forma:  
-
+						El método de máxima verosimilitud es una herramienta que nos permite obtener estimadores puntuales 
+						de una distribución dada una muestra de datos. Dado que este método implica un proceso de maximización, 
+						su implementación depende de métodos numéricos que permitan encontrar los valores máximos de la función. 
 					</section>
 
 					<section>
-						$$= \frac{1}{c}\cdot​​ e^{​​-n\theta}​​\theta^S​​$$
-
-						donde $S = \sum^n_{​​j=1}​​​​x_j$
-						y $c = \prod^n_{​​j=1}​(x_j​​!)$
+						En este caso, se realizó la implementación en una distribución Normal y un modelo de regresión Poisson. 
+						En ambos casos, los estimadores obtenidos utilizando el método de descenso en gradiente y de Newton Raphson 
+						son muy similares a los resultados obtenidos de forma analítica.
 					</section>
 				</section>	
 
