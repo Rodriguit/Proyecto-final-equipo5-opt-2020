@@ -21,4 +21,7 @@ Se configuró la instancia siguiendo los pasos de la wiki de AWS del curso de op
 ![Ejemplo_sgp\textwidth](https://github.com/Rodriguit/Proyecto-final-equipo5-opt-2020/blob/main/infraestructura/images/sgp.png)
 
 **Instalación de herramientas de trabajo Docker y Git**
-![Ejemplo_vpc\textwidth](https://github.com/Rodriguit/Proyecto-final-equipo5-opt-2020/blob/task3_computo_nube/images/vpc.png)
+
+Se utilizó el contenedor de la calse de Optimización-2020 (palmoreck/jupyterlab_optimizacion:2.1.4) basada en Python.
+
+![Ejemplo_vpc\textwidth](https://github.com/Rodriguit/Proyecto-final-equipo5-opt-2020/blob/main/infraestructura/images/contenedor.png)
