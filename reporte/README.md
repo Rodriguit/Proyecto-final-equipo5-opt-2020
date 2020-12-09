@@ -1,4 +1,4 @@
-### Carperta con reporte final del proyecto Equipo 5
+### Carpeta con reporte final del proyecto Equipo 5
 
 **Título del proyecto:**
 
