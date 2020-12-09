@@ -1,7 +1,7 @@
 import pytest
 import numpy as np
 import numpy.linalg
-from codigo/MLE import *
+from codigo.MLE import *
 
 def test_normal_estimation(data_normal):
     data=data_normal
