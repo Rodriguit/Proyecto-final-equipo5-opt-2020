@@ -58,7 +58,9 @@
 					<section>
 
 						El problema de maximizacion está dado por:
-						$$max_{\mu,\sigma}ln(\mathcal{L}(\mu,\sigma|X_n))=-\frac{n}{2}ln(2\pi)-\frac{n}{2}ln(\sigma^2) -{\frac{1}{2\sigma^2}\sum^n_{i=1}(x_i-\mu)^2}$$
+						$$max_{\mu,\sigma}ln(\mathcal{L}(\mu,\sigma|X_n))=
+						\\
+						-\frac{n}{2}ln(2\pi)-\frac{n}{2}ln(\sigma^2) -{\frac{1}{2\sigma^2}\sum^n_{i=1}(x_i-\mu)^2}$$
 
 					</section>
 					<section>
@@ -259,6 +261,21 @@
 						En este caso, se realizó la implementación en una distribución Normal y un modelo de regresión Poisson. 
 						En ambos casos, los estimadores obtenidos utilizando el método de descenso en gradiente y de Newton Raphson 
 						son muy similares a los resultados obtenidos de forma analítica.
+					</section>
+					<section>
+						1. La implementación y estimación de parámetros, se puede generalizar para cualquier distribución estadística.
+						
+
+						2. Los paquetes estadísticos más utilizados como: statmodels, linalg, etc. utilizan métodos de descenso 
+						en la optimización debido a la naturaleza algorítmica. 
+					</section>
+					<section>
+						3. En particular, para el método de newton-raphson, existe una complejidad para la generalización del método 
+						de optimización para dimensiones superiores.
+						
+						
+						4. Para poder acelerar la convergencia de los métodos se pueden adicionar metodologías como backtracking 
+						y vía exacta en las iteraciones.
 					</section>
 				</section>	
 
