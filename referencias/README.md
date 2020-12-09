@@ -14,3 +14,4 @@ Papers, Artículos o e-books:
   * [Statistical Inference](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3125891)    
   
   * [U.N.M.D.P. Métdodo de Newton-Raphson](http://www3.fi.mdp.edu.ar/analisis/temas/no_lineales_1/newtonRaphson.htm)    
+
