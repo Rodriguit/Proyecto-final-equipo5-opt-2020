@@ -4,4 +4,4 @@
 
 ## Método de Máxima Verosimilitud como problema de Optimización
 
-El archivo **ProyectoFinal_Opt_Equipo5.pdf** contiene la exposición del problema, los fundamentos técnicos, el reporte con los resultados del proyecto aplicado a dos probelmas de optimización.
+El archivo **ProyectoFinal_Opt_Equipo5.pdf** contiene la exposición del problema, los fundamentos técnicos y el reporte con los resultados del proyecto aplicado a dos probelmas de optimización.
